@@ -3,16 +3,26 @@
     - It should be compared to a variable named: numberToGuess
 */
 
+let computersNumber = Math.floor(Math.random() * 100) + 1;
+let userGuess = document.querySelector("form").value;
+let response = document.getElementsByTagName("body h3#status-response");
+
 function randomNumber(userGuess, computersNumber) {
-
+    
     // YOUR CODE BELOW
-
-
-
-
+    if (userGuess == computersNumber) {
+        console.log('Correct!')
+        response.innerText = "CORRECT";
+    } else if (userGuess < computersNumber) {
+        console.log('Higher!')
+        response.innerText = "HIGHER"; 
+    } else if (userGuess > computersNumber) {
+        console.log('Lower!')
+        response.innerText = "LOWER";
+    }
+    
     // YOUR CODE ABOVE
 };
-
 
 
 //* Have the Computer Guess your Number ---------------------------------------------
@@ -32,18 +42,29 @@ function randomNumber(userGuess, computersNumber) {
 
 function startCompGuess(num) {
     // This should return a string that denotes the first guessed number
-
+    let startNum = Math.floor((Math.random() * 100) + 1);
+    return startNum;
     // YOUR CODE ...
-
-
 }
 
 function compGuess(reply) {
+    highLowBtns[1].addEventListener('click', () => {
+        let response = compGuess('lower');
+        displayCompGuessReply(response,false);
+    });
+    
+    highLowBtns[3].addEventListener('click', () => {
+        let response = compGuess('correct');
+        displayCompGuessReply(response,true);
+    });
+    
+    highLowBtns[5].addEventListener('click', () => {
+        let response = compGuess('higher');
+        displayCompGuessReply(response,false);
+    });
+}
     /* 
     *   The parameter "reply" will either be passing "lower", "correct", or "higher". This should be considered when evaluating th elogic and response.
 
     This should return a string indicating the computers response.
-    */
-
-}
-
+*/
