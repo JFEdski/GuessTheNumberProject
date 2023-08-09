@@ -42,6 +42,10 @@ function randomNumber(userGuess, computersNumber) {
 
 let currentNumber = 1;
 
+let createGuess = (currentNumber) => {
+    return currentNumber;
+}
+
 function startCompGuess() {
     // This should return a string that denotes the first guessed number
     return ("Is your number " + currentNumber + "?");
