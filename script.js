@@ -3,22 +3,18 @@
     - It should be compared to a variable named: numberToGuess
 */
 
-let computersNumber = Math.floor(Math.random() * 100) + 1;
-let userGuess = document.querySelector("form").value;
-let response = document.getElementsByTagName("body h3#status-response");
-
 function randomNumber(userGuess, computersNumber) {
     
     // YOUR CODE BELOW
     if (userGuess == computersNumber) {
-        console.log('Correct!')
-        response.innerText = "CORRECT";
+        console.log('Correct!');
+        return("Correct!");
     } else if (userGuess < computersNumber) {
-        console.log('Higher!')
-        response.innerText = "HIGHER"; 
+        console.log('Higher!');
+        return("Higher!");
     } else if (userGuess > computersNumber) {
-        console.log('Lower!')
-        response.innerText = "LOWER";
+        console.log('Lower!');
+        return("Lower!");
     }
     
     // YOUR CODE ABOVE
