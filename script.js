@@ -43,6 +43,7 @@ function randomNumber(userGuess, computersNumber) {
 let currentNumber = 1;
 
 let createGuess = (currentNumber) => {
+    currentNumber = Math.random();
     return currentNumber;
 }
 
