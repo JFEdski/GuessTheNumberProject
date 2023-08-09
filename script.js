@@ -7,19 +7,19 @@ function randomNumber(userGuess, computersNumber) {
     
     // YOUR CODE BELOW
     if (userGuess < 0 || userGuess > 100) {
-        console.log('Please enter a number between 1 and 100!');
+        //console.log('Please enter a number between 1 and 100!');
         return('Please enter a number between 1 and 100!');
     }
     else if (userGuess < computersNumber) {
-        console.log('Higher!');
-        return("Higher!");
+        //console.log('Higher!');
+        return "Higher!";
     } else if (userGuess > computersNumber) {
         console.log('Lower!');
-        return("Lower!");
+        return "Lower!";
     }
     if (userGuess == computersNumber) {
-        console.log('Correct!');
-        return(`Correct! The number was ${userGuess}!`);
+        //console.log('Correct!');
+        return (`Correct! The number was ${userGuess}!`);
     }
     // YOUR CODE ABOVE
 };
@@ -40,15 +40,16 @@ function randomNumber(userGuess, computersNumber) {
     You are not limited to just these functions. Feel free to create a new function that may be called to help manage the flow of your code.
 */
 
+let currentNumber = 1;
 
-function startCompGuess(num) {
+function startCompGuess() {
     // This should return a string that denotes the first guessed number
-    //let startNum = Math.floor((Math.random() * 100) + 1);
-    
+    return ("Is your number " + currentNumber + "?");
     
     // YOUR CODE ...
 }
 
+startCompGuess();
 
 function compGuess(reply) {
     /* 
