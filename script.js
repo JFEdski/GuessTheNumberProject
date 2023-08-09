@@ -6,17 +6,21 @@
 function randomNumber(userGuess, computersNumber) {
     
     // YOUR CODE BELOW
-    if (userGuess == computersNumber) {
-        console.log('Correct!');
-        return("Correct!");
-    } else if (userGuess < computersNumber) {
+    if (userGuess < 0 || userGuess > 100) {
+        console.log('Please enter a number between 1 and 100!');
+        return('Please enter a number between 1 and 100!');
+    }
+    else if (userGuess < computersNumber) {
         console.log('Higher!');
         return("Higher!");
     } else if (userGuess > computersNumber) {
         console.log('Lower!');
         return("Lower!");
     }
-    
+    if (userGuess == computersNumber) {
+        console.log('Correct!');
+        return(`Correct! The number was ${userGuess}!`);
+    }
     // YOUR CODE ABOVE
 };
 
@@ -36,31 +40,20 @@ function randomNumber(userGuess, computersNumber) {
     You are not limited to just these functions. Feel free to create a new function that may be called to help manage the flow of your code.
 */
 
+
 function startCompGuess(num) {
     // This should return a string that denotes the first guessed number
-    let startNum = Math.floor((Math.random() * 100) + 1);
-    return startNum;
+    //let startNum = Math.floor((Math.random() * 100) + 1);
+    
+    
     // YOUR CODE ...
 }
 
+
 function compGuess(reply) {
-    highLowBtns[1].addEventListener('click', () => {
-        let response = compGuess('lower');
-        displayCompGuessReply(response,false);
-    });
-    
-    highLowBtns[3].addEventListener('click', () => {
-        let response = compGuess('correct');
-        displayCompGuessReply(response,true);
-    });
-    
-    highLowBtns[5].addEventListener('click', () => {
-        let response = compGuess('higher');
-        displayCompGuessReply(response,false);
-    });
-}
     /* 
     *   The parameter "reply" will either be passing "lower", "correct", or "higher". This should be considered when evaluating th elogic and response.
-
+    
     This should return a string indicating the computers response.
-*/
+    */
+}
