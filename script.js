@@ -42,10 +42,13 @@ function randomNumber(userGuess, computersNumber) {
 
 let currentNumber = 1;
 
-let createGuess = (currentNumber) => {
-    currentNumber = Math.random();
+createGuess = () => {
+    currentNumber = Math.floor(Math.random() * 100 + 1);
     return currentNumber;
 }
+
+console.log(createGuess());
+
 
 function startCompGuess() {
     // This should return a string that denotes the first guessed number
@@ -54,12 +57,28 @@ function startCompGuess() {
     // YOUR CODE ...
 }
 
-startCompGuess();
+console.log(startCompGuess());
 
 function compGuess(reply) {
     /* 
-    *   The parameter "reply" will either be passing "lower", "correct", or "higher". This should be considered when evaluating th elogic and response.
+    The parameter "reply" will either be passing "lower", "correct", or "higher". This should be considered when evaluating th elogic and response. 
     
     This should return a string indicating the computers response.
     */
+//    switch (new compGuess) {
+//     //case : 
+//         reply: "Lower";
+//         break;
+//     case 1:
+//         reply: "Higher";
+//         break;
+//     case 3:
+//         reply: "Correct";
+//         break;
+//    }
+}
+
+let createGuess = (currentNumber) => {
+    currentNumber = Math.random();0
+    return currentNumber;
 }
