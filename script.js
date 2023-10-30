@@ -65,20 +65,12 @@ function compGuess(reply) {
     
     This should return a string indicating the computers response.
     */
-//    switch (new compGuess) {
-//     //case : 
-//         reply: "Lower";
-//         break;
-//     case 1:
-//         reply: "Higher";
-//         break;
-//     case 3:
-//         reply: "Correct";
-//         break;
-//    }
-}
+    if (reply === 'lower') {
+        return (`Your number is lower? Is it ${currentNumber}?`);
+    } else if (reply === 'higher') {
+        return (`Your number is higher? Is it ${currentNumber}?`);
+    } else if (reply === 'correct') {
+        return (`I knew it was ${currentNumber}!`);
+    }
 
-let createGuess = (currentNumber) => {
-    currentNumber = Math.random();0
-    return currentNumber;
 }
