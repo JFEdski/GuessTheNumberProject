@@ -41,9 +41,11 @@ function randomNumber(userGuess, computersNumber) {
 */
 
 let currentNumber = 1;
+let lowest = 0;
+let highest = 100;
 
 createGuess = () => {
-    currentNumber = Math.floor(Math.random() * 100 + 1);
+    currentNumber = Math.floor((highest + lowest)/2);
     return currentNumber;
 }
 
@@ -66,8 +68,12 @@ function compGuess(reply) {
     This should return a string indicating the computers response.
     */
     if (reply === 'lower') {
+        highest = currentNumber;
+        currentNumber = createGuess();
         return (`Your number is lower? Is it ${currentNumber}?`);
     } else if (reply === 'higher') {
+        lowest = currentNumber;
+        currentNumber = createGuess();
         return (`Your number is higher? Is it ${currentNumber}?`);
     } else if (reply === 'correct') {
         return (`I knew it was ${currentNumber}!`);
